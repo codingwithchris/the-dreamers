@@ -1,18 +1,25 @@
 {
   "name": "the-dreamers",
-  "version": "monorepo-root",
   "description": "A cozy monorepo for Jenna & Chris & all their beautiful adventuring & dreaming needs.",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codingwithchris/the-dreamers.git"
+  "devDependencies": {
+    "prettier": "latest",
+    "turbo": "latest"
   },
-  "author": "chris+digital@chrishahn.me",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/codingwithchris/the-dreamers/issues"
+  "engines": {
+    "pnpm": ">=7.1.5",
+    "node": ">=14.0.0"
   },
-  "homepage": "https://github.com/codingwithchris/the-dreamers#readme"
+  "packageManager": "pnpm@7.1.5"
 }
